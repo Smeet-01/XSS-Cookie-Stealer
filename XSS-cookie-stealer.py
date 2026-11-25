@@ -21,18 +21,14 @@ class MyHandler(BaseHTTPRequestHandler):
         print ("%s - %s\t%s" % (
             datetime.now().strftime("%Y-%m-%d %I:%M %p"),
             self.client_address[0],
-            self.headers['user-agent']))
+            self.headers.get('user-agent', 'N/A')))
         print ("-------------------"*6)  
         for k, v in query_components.items():
             print ("%s\t\t\t%s" % (k.strip(), v))
 
-        # print query_components
-        # self.send_response(500)
-
-        # self.send_header("Content-type", "text/html")
-        # self.end_headers()
-        # self.wfile.write(c)
-
+        self.send_response(200)
+        self.send_header("Content-type", "text/plain")
+        self.end_headers()
         return
 
     def log_message(self, format, *args):
