@@ -4,6 +4,8 @@ Original Script by Ahmed Shawky @lnxg33k, repository found [here](https://github
 
 Minor changes made to the script to enable it to be run in Python3, owing to the legacy status of Python2. 
 
+> **Disclaimer:** Provided strictly for educational and authorized security testing / XSS awareness labs.
+
 ### Changes:
 > Changed all 'print' statements to appropriate Python3 syntax.
 
